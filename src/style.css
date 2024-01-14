@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.hero {
+  min-height: 75vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  background-image: url("../src/restaurant-hero.jpg");
+}
+
+.about {
+  background-image: url("../src/restaurant-hero-about.jpg");
+}
+
+.hero__image {
+  z-index: 1;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hero-cover {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.hero-content.about-hero-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.hero-content-overlay {
+  background-color: #000000c8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  color: #ffffff;
+}
+
+.hero__title {
+  font-size: 30px;
+}
+
+.hero__about,
+.about-text {
+  font-size: 20px;
+}
+
+.max-w-60 {
+  max-width: 60%;
+  margin-inline: auto;
+}
+
+.hours,
+.about-first-section {
+  background-color: #ffe4bb;
+  padding: 30px 10px;
+}
+
+.hours,
+.location,
+.about-first-section,
+.values-section {
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-block: 10px;
+}
+
+nav p {
+  position: relative;
+  cursor: pointer;
+}
+
+nav p:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  border-bottom: 1px solid orange;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  margin-top: 60px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 70%;
+  margin-inline: auto;
+}
+
+@media (max-width: 650px) {
+  .max-w-60 {
+    max-width: 100%;
+    padding-inline: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
